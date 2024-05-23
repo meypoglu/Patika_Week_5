@@ -1,6 +1,6 @@
 public class Book implements Comparable<Book>{
-    String name, author;
-    int pageNum, publishDate;
+    private String name, author;
+    private int pageNum, publishDate;
 
     public String getName() {
         return name;
