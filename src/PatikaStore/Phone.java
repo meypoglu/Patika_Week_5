@@ -1,31 +1,16 @@
 package PatikaStore;
 
-public class Phone extends Brand {
-    private double batterPower;
-    private String color;
+public class Phone extends Product {
+    String color;
+    int batteryPower;
 
-    public Phone(double batteryPower, String color,int id, double price,
-                 double discount, int stock, String name, String brandName,
-                 int RAM, int diskSpace, double screenSize) {
-        this.batterPower = batterPower;
+    public Phone(int id, int stock, int diskCapacity, int RAM, double price,
+                 double discount, double screenSize, String name, String brand,
+                 String color, int batteryPower) {
+        super(id, stock, diskCapacity, RAM, price, discount, screenSize, name,
+                brand);
         this.color = color;
-        super.setId(id);
-        super.setPrice(price);
-        super.setDiscount(discount);
-        super.setStock(stock);
-        super.setName(name);
-        super.setBrandName(brandName);
-        super.setRAM(RAM);
-        super.setDiskSpace(diskSpace);
-        super.setScreenSize(screenSize);
-    }
-
-    public double getBatterPower() {
-        return batterPower;
-    }
-
-    public void setBatterPower(double batterPower) {
-        this.batterPower = batterPower;
+        this.batteryPower = batteryPower;
     }
 
     public String getColor() {
@@ -34,5 +19,13 @@ public class Phone extends Brand {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public int getBatteryPower() {
+        return batteryPower;
+    }
+
+    public void setBatteryPower(int batteryPower) {
+        this.batteryPower = batteryPower;
     }
 }
